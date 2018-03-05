@@ -1,4 +1,7 @@
 #__*__coding:utf-8__*__
+import datetime
+
+import django
 from django.db import models
 
 # Create your models here.
@@ -15,7 +18,7 @@ class Event(models.Model):
 
 #嘉宾表
 class Guest(models.Model):
-    event = models.ForeignKey(Event) #关联发布会
+    event = models.ForeignKey(to=Event) #关联发布会
     realname = models.CharField(max_length=64) #姓名
     phone = models.CharField(max_length=16) #手机
     email = models.EmailField() #邮箱

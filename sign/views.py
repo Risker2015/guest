@@ -18,8 +18,8 @@ def index(request):
 def login_action(request):
     if request.method == "POST":
         username = request.POST.get('username','')
-        passwprd = request.POST.get('password','')
-        user = auth.authenticate(username=username,password=passwprd)
+        password = request.POST.get('password','')
+        user = auth.authenticate(username=username,password=password)
         if user and not None:
             auth.login(request,user) #登录
             response = HttpResponseRedirect('/sign/event_manage/')
