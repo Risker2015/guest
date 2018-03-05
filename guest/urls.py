@@ -2,7 +2,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from sign import views
-
+import json
 urlpatterns = [
     # Examples:
     # url(r'^$', 'guest.views.home', name='home'),
